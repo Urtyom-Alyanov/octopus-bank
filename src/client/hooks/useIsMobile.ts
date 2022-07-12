@@ -1,0 +1,27 @@
+import { useEffect, useState } from "react";
+
+export function detectMob() {
+    const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i
+    ];
+    
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
+}
+
+export const useIsMobile = () => {
+    const [isMobile, setMobile] = useState(false);
+
+    useEffect(() => {
+        setMobile(detectMob());
+    });
+
+    return isMobile;
+}

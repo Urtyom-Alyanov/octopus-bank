@@ -1,0 +1,5 @@
+node_modules
+tsconfig.server.tsbuildinfo
+dist
+chlen.js
+.next

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'VK Sans Display';
+    src: url("VK_Sans_DemiBold_vk_leaks.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'VK Sans Display';
+    src: url("VK_Sans_Medium_vk_leaks.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

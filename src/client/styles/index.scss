@@ -1,0 +1,130 @@
+$firstColor: #ff2a3c;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'SF UI Display', 'Roboto', Arial, Helvetica, sans-serif; // 'Roboto'
+  background-color: rgb(240, 240, 240);
+  @apply text-[#333];
+}
+
+.grayblue {
+    @apply text-[#a4acb6];
+}
+
+.bar-of-progress {
+  z-index: 1000;
+}
+
+.pageBlock {
+  // background-color: #fff;
+  // border-radius: 15px;
+  @apply bg-white rounded-lg shadow;
+}
+
+path {
+  fill: inherit;
+  stroke: inherit;
+}
+
+.br-15 {
+  @apply rounded-2xl;
+}
+
+.padding15px {
+  @apply p-4;
+}
+
+._grid {
+  grid-column-gap: 30px;
+  @apply grid;
+  &.grid_1-3 {
+    grid-template-columns: 1fr 3fr;
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+@layer utilities {
+  .wrapper {
+    width: 65%;
+    margin: 0 auto;
+    @media (max-width: 1520px) {
+      width: 80%;
+    }
+    @media (max-width: 1000px) {
+      width: 90%;
+    }
+    @media (max-width: 960px) {
+      width: 95%;
+    }
+  }
+}
+
+.btn {
+  transition-duration: 250ms;
+  @apply cursor-pointer font-bold text-base rounded-lg p-1;
+  background-color: rgb(241, 241, 241);
+  border: rgb(241, 241, 241) solid 2px;
+  color: rgb(85, 85, 85);
+  &:hover {
+    background-color: rgb(85, 85, 85);
+    border: rgb(85, 85, 85) solid 2px;
+    color: #ffffff;
+  }
+  &.btn-primary {
+    background-color: $firstColor;
+    border: $firstColor solid 2px;
+    color: #fff;
+    &:hover {
+      background-color: #f05663;
+      border: #f05663 solid 2px;
+      color: #fff;
+    }
+  }
+  &.btn-black {
+    background-color: rgb(85, 85, 85);
+    border: rgb(85, 85, 85) solid 2px;
+    color: #fff;
+    &:hover {
+      background-color: rgb(49, 49, 49);
+      border: rgb(49, 49, 49) solid 2px;
+      color: #fff;
+    }
+  }
+  &.btn-nobg {
+    background: none;
+    border: rgb(241, 241, 241) solid 2px;
+    color: rgb(194, 194, 194);
+    &.btn-primary {
+      border: $firstColor solid 2px;
+      color: $firstColor;
+      &:hover {
+        background: $firstColor;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.active_scale-97:active {
+  transform: scale(.97);
+}
+
+.divCenter {
+  @apply flex flex-col justify-items-center items-center;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
